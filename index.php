@@ -21,6 +21,7 @@
       <h1 class="h3">📚 Book List</h1>
       <div class="action-btn">
         <a href="create.php" class="btn btn-primary">+ Add New Book</a>
+        <a href="add_categories.php" class="btn btn-info">+ Add Categories</a>
         <a href="trash.php" class="btn btn-danger">Trash Book List</a>
         <a href="index.php" class="btn btn-primary">All Books</a>
       </div>

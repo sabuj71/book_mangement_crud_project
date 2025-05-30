@@ -49,44 +49,6 @@
     }
 }
 
-
-  // if(!empty($image_url)){
-  //   // Target directory for the uploaded image
-  //   $target_dir ="uploads/";
-  //   // Get the file name and extension
-  //   $fileName= basename($_FILES['image_url']['name']);
-  //   $target_file = $target_dir . $fileName;
-  //   $image_file_type =strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
-
-  //   // Check if the file is an actual image
-  //   $check =getimagesize($_FILES['image_url']['tmp_name']);
-  //   if($check === false){
-  //     die("File is not an image.");
-  //   }
-
-  //   //check file size
-
-  //   if($_FILES['image_url']['size'] > 5*1024*1024){ // 5MB
-  //     die("Sorry, your file is too large.");
-  //   }
-
-  //   // Allow certain file formats
-  //   $allowed_formats = array("jpg", "jpeg", "png", "gif");
-  //   if(!in_array($image_url, $allowed_formats)){
-  //     die("Sorry, only JPG, JPEG, PNG & GIF files are allowed.");
-  //   }
-
-  //   // move the uploaded file to the target directory
-
-  //   if(move_uploaded_file($_FILES['image_url']['tmp_name'], $target_file)){
-  //     $image_url = $target_file; // Set the image URL to the target file path
-  //   } else {
-  //     die("Sorry, there was an error uploading your file.");
-  //   }
-  // }
-
-  // die();
-
   // Insert data into the database
   if($is_connect) {
       $sql = "INSERT INTO books (book_name, author, isbn, publisher, published_date, categories, language, pages, description, image_url)

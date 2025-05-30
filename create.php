@@ -1,4 +1,11 @@
 <?php include "db.php"?>
+
+  <?php
+  $sql = "SELECT * FROM categories ";
+  $result = mysqli_query($connection, $sql);
+  $data = mysqli_fetch_all($result, MYSQLI_ASSOC);
+  ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -33,7 +40,11 @@
         </div>
         <div class="col-md-6">
             <label class="form-label">Category</label>
-            <input type="text" name="categories" class="form-control">
+            <select class="form-select" name="category" id="">
+                <?php foreach(  $data as $row ) : ?>
+                    <option value="<?php echo $row['id'] ?>"><?php echo $row['name'] ?></option>
+                <?php endforeach ?>
+            </select>
         </div>
         <div class="col-md-6">
             <label class="form-label">Language</label>
